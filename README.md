@@ -43,6 +43,29 @@ Optional flags:
 - Playback shows an in-place status line, e.g. `[playing] 01:23 / 03:45`.
 - Repeats forever until you stop it (`Ctrl+C`).
 
+## Android (Termux)
+
+This repository includes a Termux-friendly script at [scripts/muz-android-screenoff.sh](scripts/muz-android-screenoff.sh) for Android devices.
+
+Install prerequisites in Termux:
+
+```bash
+pkg update && pkg upgrade
+pkg install yt-dlp mpv jq socat coreutils termux-api
+```
+
+Run:
+
+```bash
+./scripts/muz-android-screenoff.sh "https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID"
+```
+
+Controls while playing:
+
+- `n` — skip
+- `p` — pause/resume
+- `q` — quit
+
 ## License
 
 Licensed under either of [LICENSE-MIT](LICENSE-MIT) or [LICENSE-APACHE](LICENSE-APACHE) at your option.
